@@ -16,7 +16,9 @@ public class Product {
     private String description;
     private String imageUrl;
     private BigDecimal price;
-
+/////get 是拿出来数据，读取对象里面的数据
+    ////setter负责修改对象里面的数据，放进去
+    
     public String getDescription() {
         return description;
     }
@@ -65,3 +67,21 @@ public class Product {
         this.price = price;
     }
 }
+//////Product对象
+
+id
+ |
+ +-- getId()    读取
+ +-- setId()    修改
+
+
+description
+ |
+ +-- getDescription() 读取
+ +-- setDescription() 修改
+
+
+price
+ |
+ +-- getPrice() 读取
+ +-- setPrice() 修改
