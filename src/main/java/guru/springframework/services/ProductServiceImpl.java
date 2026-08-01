@@ -15,11 +15,14 @@ public class ProductServiceImpl implements ProductService {
     public void setProductRepository(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
+    /// 把 外面的传进来的repository， 保存到自己的变量里面
 
     @Override
+    ///重写父类或者接口的方法
     public Iterable<Product> listAllProducts() {
         return productRepository.findAll();
     }
+    ///实现这个方法，
 
     @Override
     public Product getProductById(Integer id) {
