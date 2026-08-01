@@ -10,6 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+//  ProductController
+│
+├── 查看所有商品
+├── 查看一个商品
+├── 新建商品
+├── 编辑商品
+└── 保存商品
 public class ProductController {
 
     private ProductService productService;
@@ -22,11 +29,15 @@ public class ProductController {
     @RequestMapping(value = "/products", method = RequestMethod.GET)
     public String list(Model model){
         model.addAttribute("products", productService.listAllProducts());
-        System.out.println("Returning rpoducts:");
+        System.out.println("Returning products:");
         return "products";
+        ///去找productes.html
     }
 
+    ////Model model一个装数据的盒子，里面可以放products, product
+
     @RequestMapping("product/{id}")
+    ///{id}路径变量
     public String showProduct(@PathVariable Integer id, Model model){
         model.addAttribute("product", productService.getProductById(id));
         return "productshow";
@@ -53,3 +64,5 @@ public class ProductController {
     }
 
 }
+//post提交表单
+
