@@ -15,3 +15,4 @@ public class IndexController {
 //index的页面
     }
 }
+打开首页
